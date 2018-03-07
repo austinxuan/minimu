@@ -1,3 +1,7 @@
+# -*- coding: utf-8 -*-
+
+# 使用dtypes.windll调用win32API
+
 import random
 
 from ctypes import windll, c_buffer

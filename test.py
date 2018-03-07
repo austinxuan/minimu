@@ -7,6 +7,6 @@ import minimu
 
 testmusicdir=os.getenv('testmusicdir')
 os.chdir(testmusicdir)
-clip=minimu.load('test.mp3')
+clip=minimu.load('1.mp3')
 clip.play()
 time.sleep(clip.seconds())

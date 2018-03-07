@@ -7,7 +7,10 @@ fork from [michaelgundlach/mp3play](https://github.com/michaelgundlach/mp3play),
 
 reference from [spwert/mp3play](https://github.com/spwert/mp3play) about the support of python3.x
 
-main target: 
+### attentions
+1. some comments are in Chinese 
+
+### main target: 
 1. add Chinese document
 2. More user friendly
 3. Support more music formats
@@ -40,13 +43,13 @@ Fork自[michaelgundlach/mp3play](https://github.com/michaelgundlach/mp3play),因
 
 参考了[spwert/mp3play](https://github.com/spwert/mp3play)对python3的支持
 
-说明:
+### 说明:
 1. 暂只支持windows平台
 2. 暂只支持mp3格式
 3. 有些mp3格式也无法播放
 4. 开发中
 
-主要目标: 
+### 主要目标: 
 1. 添加中文文档
 2. 对用户更加友好
 3. 支持更多的音乐格式
