@@ -3,7 +3,7 @@ import os
 if os.name == 'nt':
     from .windows import AudioClip as _PlatformSpecificAudioClip
 else:
-    raise Exception("mp3play can't run on your operating system.")
+    raise Exception("can't run on this operating system.")
 
 def load(filename):
     """Return an AudioClip for the given filename."""
@@ -24,7 +24,7 @@ class AudioClip(object):
         as smaller than start_ms, nothing happens.
         """
         if end_ms != None and end_ms < start_ms:
-            return
+            raise Exception("end_ms should be greater than start_ms")
         else:
             return self._clip.play(start_ms, end_ms)
 
