@@ -1,73 +1,87 @@
-# minimu-readme
+# minimu
 the name came from 'mini music player'
 
 to be a small, hidden and clean lightweight music player
 
-fork from [michaelgundlach/mp3play](https://github.com/michaelgundlach/mp3play), because there is no license in the original project, so if any infringement problem, I will handle it ASAP.
+fork from [michaelgundlach/mp3play](https://github.com/michaelgundlach/mp3play), but almost all the code was renewed to support python3 and unicode file name.
 
-reference from [spwert/mp3play](https://github.com/spwert/mp3play) about the support of python3.x
+### highlight
+1. only for python3
+2. only for windows
+3. now only for mp3
+4. still in developing
 
-### attentions
-1. some comments are in Chinese 
+### target
+1. More user friendly
+2. Support more music formats
 
-### main target: 
-1. add Chinese document
-2. More user friendly
-3. Support more music formats
+### todo
+1. main.py: todo
+3. support windows in english (now can't return english error describting)
+
+### how to use
+```
+import minimu
+
+song=minimu.load(r'example.mp3')
+
+song.play() # play
+
+song.pause() # pause
+
+song.resume() # resume
+
+song.stop() # stop
+
+song.isplaying() # True: play or pause | False: stop
+
+song.volume(50) # set volume%
+```
 
 ---
-this is the readme of the original author
-> Several useful example scripts are available at
-> 
->   http://code.google.com/p/mp3play/wiki/Examples
-> 
-> and an example script to get you started is in example.py.  To run it, type
-> 
->   python.exe example.py
-> 
-> in your Python directory.
-> 
-> Questions?  Visit the project page at http://mp3play.googlecode.com .
-> 
-> Thanks.
-> Michael Gundlach
-> gundlach@gmail.com
 
----
-# minimu-中文readme
+# minimu-中文
 名字取自mini music player
 
-力图作为一个小巧,隐蔽,干净的超轻量音乐播放器
+力图成为一个小巧,隐蔽,干净的超轻量音乐播放器
 
-Fork自[michaelgundlach/mp3play](https://github.com/michaelgundlach/mp3play),因为原项目并没有任何license,如有任何侵权问题我将及时处理
+Fork自[michaelgundlach/mp3play](https://github.com/michaelgundlach/mp3play), 但是基本所有代码都已经被更新以支持python3和unicode文件名.
 
-参考了[spwert/mp3play](https://github.com/spwert/mp3play)对python3的支持
+### 注意
+1. 只支持python3
+2. 只支持windows平台
+3. 暂只支持mp3格式
+4. 仍在开发中
 
-### 说明:
-1. 暂只支持windows平台
-2. 暂只支持mp3格式
-3. 有些mp3格式也无法播放
-4. 开发中
+### 目标
+1. 对用户更加友好
+2. 支持更多的音乐格式
 
-### 主要目标: 
-1. 添加中文文档
-2. 对用户更加友好
-3. 支持更多的音乐格式
+### todo
+1. 完成main.py中的todo
+2. 完成以下功能:
+    1. 指定文件目录播放
+    2. 指定本地歌单播放
+    3. 快捷键:播放,暂停,恢复,停止,上一首,下一首,快进,快退,加减音量
+    4. 通过歌曲链接播放
+    5. 指定包含歌曲链接的歌单播放
+3. 支持非中文windows系统
 
----
-以下是原作者的readme
-> Several useful example scripts are available at
-> 
->   http://code.google.com/p/mp3play/wiki/Examples
-> 
-> and an example script to get you started is in example.py.  To run it, type
-> 
->   python.exe example.py
-> 
-> in your Python directory.
-> 
-> Questions?  Visit the project page at http://mp3play.googlecode.com .
-> 
-> Thanks.
-> Michael Gundlach
-> gundlach@gmail.com
+### 如何使用
+```
+import minimu
+
+song=minimu.load(r'中文路径.mp3')
+
+song.play() # 开始播放
+
+song.pause() # 暂停播放
+
+song.resume() # 恢复播放
+
+song.stop() # 停止播放
+
+song.isplaying() # True:正在播放(包括暂停) False:已停止播放
+
+song.volume(50) # 调节音量至50%
+```
