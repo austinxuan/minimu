@@ -20,6 +20,8 @@ fork from [michaelgundlach/mp3play](https://github.com/michaelgundlach/mp3play),
 3. support windows in english (now can't return english error describting)
 
 ### how to use
+
+1. play one song
 ```
 import minimu
 
@@ -36,6 +38,37 @@ song.stop() # stop
 song.isplaying() # True: play or pause | False: stop
 
 song.volume(50) # set volume%
+```
+
+2. play one folder
+```
+>>> import minimu as mu
+>>> # loda mp3s in this folder,show the music list and auto play the first one
+>>> l = mu.loadlist(r'testmusic')
+0    EMI
+1    GodSaveTheQueen
+2    NewYork
+3    NoFeelings
+>>> # show the music list
+>>> l.shownames()
+0    EMI
+1    GodSaveTheQueen
+2    NewYork
+3    NoFeelings
+>>> # play music 6
+>>> l.play(6)
+>>> l.pause()
+>>> l.resume()
+>>> l.stop()
+>>> l.play()
+>>> l.isplaying()
+True
+>>> l.volume(80)
+>>> # play next one
+>>> l.next()
+>>> # play last one
+>>> l.last()
+>>> l.stop()
 ```
 
 ---
@@ -68,6 +101,8 @@ Fork自[michaelgundlach/mp3play](https://github.com/michaelgundlach/mp3play), �
 3. 支持非中文windows系统
 
 ### 如何使用
+
+1. 单曲播放
 ```
 import minimu
 
@@ -84,4 +119,43 @@ song.stop() # 停止播放
 song.isplaying() # True:正在播放(包括暂停) False:已停止播放
 
 song.volume(50) # 调节音量至50%
+```
+
+2. 文件夹播放
+```
+>>> import minimu as mu
+>>> # 读取文件夹内mp3文件,显示歌曲列表,并自动播放第一首
+>>> l = mu.loadlist(r'testmusic')
+0    不多
+1    大象
+2    好威武支持有希望
+3    定西
+4    方式
+5    热河
+6    看见
+7    鼠说
+>>> # 显示歌曲列表
+>>> l.shownames()
+0    不多
+1    大象
+2    好威武支持有希望
+3    定西
+4    方式
+5    热河
+6    看见
+7    鼠说
+>>> # 播放歌曲序号6
+>>> l.play(6)
+>>> l.pause()
+>>> l.resume()
+>>> l.stop()
+>>> l.play()
+>>> l.isplaying()
+True
+>>> l.volume(80)
+>>> # 播放下一首
+>>> l.next()
+>>> # 播放上一首
+>>> l.last()
+>>> l.stop()
 ```
